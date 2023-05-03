@@ -1,13 +1,10 @@
-# avalia-backstage-ignite
-A faster way to get started with your Developer Portal based on Backstage
+# Welcome to DX Hub
 
 
 
-## How we created this repo
+More information in the [documentation](./docs/index.md), and in particular in the [getting started](./docs/getting-started.md) page.
 
-### Setup and scaffolding
 
-1. Make sure that we are using **Node v18.16.0**
-2. Use the standard way to scaffold a new Backstage application:`npx @backstage/create-app@latest`
-3. Setup basic configuration (e.g. communication ports) in `app-config.yaml`
+
+![dx-hub-home-geek](./docs/images/dx-hub-home-geek.png)
 
