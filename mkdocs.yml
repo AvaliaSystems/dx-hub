@@ -1,0 +1,11 @@
+site_name: DX Hub
+docs_dir: docs
+plugins:
+  - techdocs-core
+nav:
+  - Overview: index.md
+  - Getting started: getting-started.md
+  - Explore the code: code-structure.md
+  - Roadmap: roadmap.md
+  - Get in touch: get-in-touch.md
+  
