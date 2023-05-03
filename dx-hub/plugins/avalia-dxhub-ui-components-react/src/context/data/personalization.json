@@ -1,0 +1,243 @@
+{
+  "heroImageUrls": {
+    "Boss": [
+      "/images/woman-005.png",
+      "/images/man-002.png",
+      "/images/office-002.png"
+    ],
+    "Geek": [
+      "/images/girl-002.png",
+      "/images/office-001.png",
+      "/images/boy-003.png"
+    ]
+  },
+  "sustainableBitHeroImageUrls": {
+    "Boss": [
+      "/images/green-office-001.png",
+      "/images/green-office-005.png",
+      "/images/green-office-006.png"
+    ],
+    "Geek": [
+      "/images/green-office-004.png",
+      "/images/green-office-002.png",
+      "/images/green-office-003.png"
+    ]
+  },
+  "benefits": {
+    "Boss": [
+      {
+        "benefit": "Improved Time-to-Market",
+        "indicator": "Time-to-Market",
+        "explanation": "Backstage streamlines and automates development tasks, enabling faster product releases.",
+        "metrics": "Time-to-market for new features or products."
+      },
+      {
+        "benefit": "Increased Innovation",
+        "indicator": "Innovation Index",
+        "explanation": "Backstage provides a customizable platform for experimentation and integration with new technologies.",
+        "metrics": "Number of new products or technology integrations created by developers."
+      },
+      {
+        "benefit": "Improved Customer Satisfaction",
+        "indicator": "Customer Satisfaction",
+        "explanation": "Backstage can help deliver high-quality software products and features to customers faster.",
+        "metrics": "Customer satisfaction survey results or feedback on product releases."
+      },
+      {
+        "benefit": "Better ROI on Software Investments",
+        "indicator": "Return on Investment",
+        "explanation": "Backstage can help optimize development processes and reduce overhead costs, leading to better returns on software investments.",
+        "metrics": "Reduction in software development costs or improvement in profitability of software products."
+      }
+    ],
+    "Geek": [
+      {
+        "benefit": "Increased Developer Productivity",
+        "indicator": "Developer Productivity",
+        "explanation": "Backstage provides a unified platform for managing development tasks, reducing administrative time and increasing productivity.",
+        "metrics": "Cycle time, lead time, code review feedback time, and number of bugs or issues."
+      },
+      {
+        "benefit": "Enhanced Collaboration",
+        "indicator": "Collaboration Pulse",
+        "explanation": "Backstage enables teams to collaborate and communicate more effectively, resulting in higher quality code and faster development cycles.",
+        "metrics": "Number of pull requests merged per sprint, improvement in code review feedback time, and reduction in time spent on administrative tasks."
+      },
+      {
+        "benefit": "Better Code Quality",
+        "indicator": "Quality",
+        "explanation": "Backstage integrates with tools for automated testing, code review, and analysis, resulting in higher-quality code and fewer errors in production.",
+        "metrics": "Code coverage, reduction in number of bugs or issues in production, and improvement in code review feedback."
+      },
+      {
+        "benefit": "Reduced Onboarding Time",
+        "indicator": "Onboarding Time",
+        "explanation": "Backstage provides a consistent and intuitive platform, reducing the time it takes for new developers to get up to speed.",
+        "metrics": "Reduction in time to onboard new developers, improvement in ramp-up time for new projects or features, and feedback from new developers on ease of use."
+      }
+    ],
+    "default": []
+  },
+  "impact": {
+    "impactCards": {
+      "CEO": [
+        {
+          "title": "Revenue",
+          "subTitle": "Total revenue generated this month, compared to last month"
+        },
+        {
+          "title": "Customer Satisfaction",
+          "subTitle": "Overall customer satisfaction score for our software products this month"
+        },
+        {
+          "title": "Monthly Active Users",
+          "subTitle": "Total number of active users for our products this month, compared to last month"
+        },
+        {
+          "title": "Feature Adoption",
+          "subTitle": "Percentage of users adopting new features released this month"
+        },
+        {
+          "title": "Team Performance",
+          "subTitle": "Comparison of team performance metrics and development velocity this month"
+        }
+      ],
+      "CTO": [
+        {
+          "title": "Business impact",
+          "subTitle": "Contribution to growth and efficiency"
+        },
+        {
+          "title": "External Quality",
+          "subTitle": "Reliability, availability, performance"
+        },
+        {
+          "title": "Internal Quality",
+          "subTitle": "Code, security, tests, documentation"
+        },
+        {
+          "title": "Innovation",
+          "subTitle": "Flow distribution, time to market"
+        },
+        {
+          "title": "Client satisfaction",
+          "subTitle": "Are we "
+        },
+        {
+          "title": "Team health",
+          "subTitle": "Trends"
+        }
+      ],
+      "CFO": [
+        {
+          "title": "Technology Expenses",
+          "subTitle": "Total expenditure on technology and software development this month"
+        },
+        {
+          "title": "Cost of Customer Acquisition (CAC)",
+          "subTitle": "Average cost of acquiring a new customer this month"
+        },
+        {
+          "title": "Lifetime Value (LTV)",
+          "subTitle": "Average revenue generated from a customer over their lifetime this month"
+        },
+        {
+          "title": "Budget Utilization",
+          "subTitle": "Comparison of actual expenses vs budget for the technology department this month"
+        },
+        {
+          "title": "Return on Investment (ROI)",
+          "subTitle": "Financial return on technology investments this month"
+        }
+      ],
+      "Head of HR": [
+        {
+          "title": "Employee Engagement",
+          "subTitle": "Average employee engagement score in the technology department this month"
+        },
+        {
+          "title": "Attrition Rate",
+          "subTitle": "Percentage of employees leaving the technology department this month"
+        },
+        {
+          "title": "Hiring Progress",
+          "subTitle": "Number of new hires and open positions in the technology department this month"
+        },
+        {
+          "title": "Employee Training",
+          "subTitle": "Number of employees participating in skill development programs this month"
+        },
+        {
+          "title": "Diversity & Inclusion",
+          "subTitle": "Diversity metrics and inclusion initiatives in the technology department this month"
+        }
+      ],
+      "Head of Product": [
+        {
+          "title": "Product Roadmap Progress",
+          "subTitle": "Percentage of roadmap features and milestones achieved this month"
+        },
+        {
+          "title": "Product Quality",
+          "subTitle": "Average product quality score based on user feedback and bug reports this month"
+        },
+        {
+          "title": "Feature Usage",
+          "subTitle": "Most and least used features in our software products this month"
+        },
+        {
+          "title": "Competitor Analysis",
+          "subTitle": "Key developments and trends in competitor products this month"
+        },
+        {
+          "title": "Time to Market",
+          "subTitle": "Average time taken to release new features from ideation to deployment this month"
+        }
+      ],
+      "Builder": [
+        {
+          "title": "Personal Productivity",
+          "subTitle": "Tasks completed and time spent on development activities this month"
+        },
+        {
+          "title": "Code Review Metrics",
+          "subTitle": "Number of code reviews conducted and improvements suggested this month"
+        },
+        {
+          "title": "Continuous Integration (CI) Metrics",
+          "subTitle": "Build success rate and time spent on fixing CI pipeline issues this month"
+        },
+        {
+          "title": "Technical Debt",
+          "subTitle": "Identified technical debt items and progress on addressing them this month"
+        },
+        {
+          "title": "Learning & Development",
+          "subTitle": "Hours spent on learning new technologies and enhancing skills this month"
+        }
+      ],
+      "default": [
+        {
+          "title": "Revenue",
+          "subTitle": ""
+        },
+        {
+          "title": "Time to market",
+          "subTitle": ""
+        },
+        {
+          "title": "Quality",
+          "subTitle": "Speed up Time to Market"
+        },
+        {
+          "title": "Client Satisfaction",
+          "subTitle": "bb"
+        },
+        {
+          "title": "Team Satisfaction",
+          "subTitle": "Xxx"
+        }
+      ]
+    }
+  }
+}

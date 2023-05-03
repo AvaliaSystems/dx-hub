@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: avalia-repos-and-forks
+spec:
+  type: url
+  targets:
+    - https://github.com/AvaliaSystems/InnerSourcePatterns/blob/main/catalog-info.yaml
+    - https://github.com/AvaliaSystems/GreenSoftwarePatterns/blob/main/catalog-info.yaml
+    - https://github.com/AvaliaSystems/cncf-glossary/blob/main/catalog-info.yaml

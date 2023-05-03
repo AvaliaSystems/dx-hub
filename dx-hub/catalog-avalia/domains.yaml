@@ -1,0 +1,21 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: developer-experience
+spec:
+  owner: dx-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: software-analytics
+spec:
+  owner: tech-dd-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: ai-ml
+spec:
+  owner: research-team

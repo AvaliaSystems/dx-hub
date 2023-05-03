@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { apiDocsPlugin, ApiExplorerPage } from '@backstage/plugin-api-docs';
 import {
   CatalogEntityPage,
@@ -33,9 +33,26 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
+import { ThemeProvider, CssBaseline } from '@material-ui/core';
+import { avaliaDxHubTheme } from '@internal/avalia-dxhub-themes';
+import { AvaliaDxHubHomePage } from '@internal/plugin-avalia-dxhub-ui-components-react';
+import { AvaliaDxKickStartPage } from '@internal/plugin-avalia-dxhub-ui-components-react';
+import { SustainableBitsPage } from '@internal/plugin-avalia-dxhub-ui-components-react/src/pages/SustainableBitsPage';
 
 const app = createApp({
   apis,
+  themes: [
+    {
+      id: 'avalia-dxhub-theme',
+      title: 'Avalia',
+      variant: 'light',
+      Provider: ({ children }) => (
+        <ThemeProvider theme={avaliaDxHubTheme}>
+          <CssBaseline>{children}</CssBaseline>
+        </ThemeProvider>
+      ),
+    },
+  ],
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
       createComponent: scaffolderPlugin.routes.root,
@@ -55,7 +72,9 @@ const app = createApp({
 
 const routes = (
   <FlatRoutes>
-    <Route path="/" element={<Navigate to="catalog" />} />
+    <Route path="/" element={<AvaliaDxHubHomePage />} />
+    <Route path="/avalia-dx-kickstart" element={<AvaliaDxKickStartPage />} />
+    <Route path="/sustainable-bits" element={<SustainableBitsPage />} />
     <Route path="/catalog" element={<CatalogIndexPage />} />
     <Route
       path="/catalog/:namespace/:kind/:name"

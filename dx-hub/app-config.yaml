@@ -1,9 +1,9 @@
 app:
-  title: Scaffolded Backstage App
+  title: DX Hub
   baseUrl: http://localhost:1400
 
 organization:
-  name: My Company
+  name: Avalia Systems
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
@@ -19,6 +19,14 @@ backend:
     # host: 127.0.0.1
   csp:
     connect-src: ["'self'", 'http:', 'https:']
+    img-src:
+      - 'https://kroki.io'
+      - 'data:'
+      - "'self'"
+    frame-src:
+      - 'youbube.com'
+      - 'www.youtube.com'
+
     # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
     # Default Helmet Content-Security-Policy values can be removed by setting the key to false
   cors:
@@ -75,20 +83,22 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Component, Domain, System, API, Resource, Location]
   locations:
-    # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
-      target: ../../examples/entities.yaml
-
-    # Local example template
-    - type: file
-      target: ../../examples/template/template.yaml
-      rules:
-        - allow: [Template]
-
-    # Local example organizational data
-    - type: file
-      target: ../../examples/org.yaml
+      target: ../../catalog-avalia/all.yaml
       rules:
         - allow: [User, Group]
+
+    # - type: file
+    #   target: ../../examples/entities.yaml
+
+    # - type: file
+    #   target: ../../examples/template/template.yaml
+    #   rules:
+    #     - allow: [Template]
+
+    # - type: file
+    #   target: ../../examples/org.yaml
+    #   rules:
+    #     - allow: [User, Group]

@@ -1,0 +1,11 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: backstage
+  description: Backstage
+spec:
+  type: url
+  targets:
+    - https://github.com/backstage/backstage/blob/master/catalog-info.yaml
+    - https://github.com/backstage/backstage/blob/master/plugins/techdocs-backend/examples/documented-component/catalog-info.yaml
