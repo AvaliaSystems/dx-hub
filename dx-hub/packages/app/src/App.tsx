@@ -75,7 +75,10 @@ const routes = (
     <Route path="/" element={<AvaliaDxHubHomePage />} />
     <Route path="/avalia-dx-kickstart" element={<AvaliaDxKickStartPage />} />
     <Route path="/sustainable-bits" element={<SustainableBitsPage />} />
-    <Route path="/catalog" element={<CatalogIndexPage />} />
+    <Route
+      path="/catalog"
+      element={<CatalogIndexPage initiallySelectedFilter="all" />}
+    />
     <Route
       path="/catalog/:namespace/:kind/:name"
       element={<CatalogEntityPage />}
