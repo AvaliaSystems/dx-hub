@@ -2,12 +2,11 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: dx-hub
-  description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  description: A faster way to get started with Backstage
+  annotations:
+    github.com/project-slug: avaliasystems/dx-hub
+    backstage.io/techdocs-ref: dir:.
 spec:
-  type: website
-  owner: john@example.com
+  type: library
+  owner: avalia-systems
   lifecycle: experimental

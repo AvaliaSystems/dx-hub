@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: avalia-dxhub-ignite-catalog
-  description: A collection of entities to demo DX Hub Ignite
+  name: avalia-dxhub-catalog
+  description: A collection of entities to demo DX Hub
 spec:
   targets:
     - ./org.yaml

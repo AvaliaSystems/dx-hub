@@ -68,6 +68,7 @@ techdocs:
   builder: 'local' # Alternatives - 'external'
   generator:
     runIn: 'docker' # Alternatives - 'local'
+    dockerImage: 'avaliasystems/techdocs'
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
@@ -89,6 +90,10 @@ catalog:
       target: ../../catalog-avalia/all.yaml
       rules:
         - allow: [User, Group]
+    - type: url
+      target: https://github.com/AvaliaSystems/dx-hub/blob/main/catalog-info.yaml
+      rules:
+        - allow: [Component]
     - type: url
       target: https://github.com/AvaliaSystems/dx-hub-templates/blob/main/avalia.yaml
       rules:
