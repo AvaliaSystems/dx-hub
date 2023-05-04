@@ -5,7 +5,7 @@ metadata:
   description: A faster way to get started with Backstage
   annotations:
     github.com/project-slug: avaliasystems/dx-hub
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: dir:..
 spec:
   type: library
   owner: avalia-systems

@@ -91,7 +91,7 @@ catalog:
       rules:
         - allow: [User, Group]
     - type: url
-      target: https://github.com/AvaliaSystems/dx-hub/blob/main/catalog-info.yaml
+      target: https://github.com/AvaliaSystems/dx-hub/blob/main/dx-hub/catalog-info.yaml
       rules:
         - allow: [Component]
     - type: url
