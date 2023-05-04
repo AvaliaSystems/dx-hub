@@ -1,7 +1,6 @@
 import { BackstageTheme } from '@backstage/theme';
 import { Grid, makeStyles } from '@material-ui/core';
 import React from 'react';
-import { useContext } from 'react';
 import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import TimelineIcon from '@material-ui/icons/Timeline';

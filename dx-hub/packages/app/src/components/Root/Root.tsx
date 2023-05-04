@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { Box, makeStyles, Typography } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import ListIcon from '@material-ui/icons/List';
 import ExtensionIcon from '@material-ui/icons/Extension';

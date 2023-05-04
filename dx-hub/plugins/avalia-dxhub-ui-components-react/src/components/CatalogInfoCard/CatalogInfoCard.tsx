@@ -55,7 +55,11 @@ type CatalogInfoCardProps = {
 
 export const CatalogInfoCard = (props: CatalogInfoCardProps) => {
   const catalogApi = useApi(catalogApiRef);
-  const { value, loading, error } = useAsync(async () => {
+  const {
+    value,
+    loading: _loading,
+    error: _error,
+  } = useAsync(async () => {
     const response = await catalogApi.queryEntities({
       filter: { kind: props.kind },
       limit: 0,
