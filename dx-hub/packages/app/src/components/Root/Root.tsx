@@ -47,51 +47,53 @@ export const Root = ({ children }: PropsWithChildren<{}>) => {
       <SidebarPage>
         <Link to="/">
           <Box className={classes.logo} />
-        </Link>{' '}
-        <Box
-          height="5rem"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          paddingRight="1rem"
-        >
-          <PersonaToggle />
-        </Box>
-        <Sidebar disableExpandOnHover>
-          <SidebarGroup label="Search" icon={<SearchIcon />} to="/search">
-            <SidebarSearchModal />
-          </SidebarGroup>
-          <SidebarGroup label="Menu" icon={<MenuIcon />}>
-            <SidebarItem icon={HomeIcon} to="/" text="Home" />
-            <SidebarItem
-              icon={EcoIcon}
-              color="green"
-              to="sustainable-bits"
-              text="Sustainable Bits"
-            />
-            <SidebarItem icon={ListIcon} to="catalog" text="Home" />
-            <SidebarItem icon={ExtensionIcon} to="api-docs" text="APIs" />
-            <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
-            <SidebarItem
-              icon={FlightTakeoffIcon}
-              to="avalia-dx-kickstart"
-              text="DX Kickstart"
-            />
-            <SidebarItem
-              icon={CreateComponentIcon}
-              to="create"
-              text="Create..."
-            />
-          </SidebarGroup>
-          <SidebarGroup
-            label="Settings"
-            icon={<UserSettingsSignInAvatar />}
-            to="/settings"
+        </Link>
+        <Box height="100vh" overflow="auto">
+          <Box
+            height="5rem"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            paddingRight="1rem"
           >
-            <SidebarSettings />
-          </SidebarGroup>
-        </Sidebar>
-        {children}
+            <PersonaToggle />
+          </Box>
+          <Sidebar disableExpandOnHover>
+            <SidebarGroup label="Search" icon={<SearchIcon />} to="/search">
+              <SidebarSearchModal />
+            </SidebarGroup>
+            <SidebarGroup label="Menu" icon={<MenuIcon />}>
+              <SidebarItem icon={HomeIcon} to="/" text="Home" />
+              <SidebarItem
+                icon={EcoIcon}
+                color="green"
+                to="sustainable-bits"
+                text="Sustainable Bits"
+              />
+              <SidebarItem icon={ListIcon} to="catalog" text="Home" />
+              <SidebarItem icon={ExtensionIcon} to="api-docs" text="APIs" />
+              <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
+              <SidebarItem
+                icon={FlightTakeoffIcon}
+                to="avalia-dx-kickstart"
+                text="DX Kickstart"
+              />
+              <SidebarItem
+                icon={CreateComponentIcon}
+                to="create"
+                text="Create..."
+              />
+            </SidebarGroup>
+            <SidebarGroup
+              label="Settings"
+              icon={<UserSettingsSignInAvatar />}
+              to="/settings"
+            >
+              <SidebarSettings />
+            </SidebarGroup>
+          </Sidebar>
+          {children}
+        </Box>
       </SidebarPage>
     </PersonaContextProvider>
   );
