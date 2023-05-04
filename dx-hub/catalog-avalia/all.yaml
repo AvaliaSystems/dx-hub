@@ -9,3 +9,4 @@ spec:
     - ./domains.yaml
     - ./entities.yaml
     - ./locations.yaml
+    - https://github.com/AvaliaSystems/dx-hub-templates/blob/main/avalia.yaml
