@@ -67,10 +67,12 @@ proxy:
 techdocs:
   builder: 'local' # Alternatives - 'external'
   generator:
-    runIn: 'docker' # Alternatives - 'local'
+    runIn: 'docker' # Alternatives - 'local' or 'docker'
     dockerImage: 'avaliasystems/techdocs'
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+    local:
+      publishDirectory: './techdocs-cache'
 
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
