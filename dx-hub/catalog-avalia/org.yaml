@@ -23,6 +23,13 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
+  name: akebono
+spec:
+  memberOf: [research-team, dx-team]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
   name: nakamura
 spec:
   memberOf: [research-team]

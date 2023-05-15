@@ -1,4 +1,12 @@
-# DX Hub: ignite your Backstage Developer Portal
+!!! tip "Quickstart with our Docker image"
+
+    1. [fork](https://github.com/AvaliaSystems/dx-hub/fork) this repo
+    2. `git clone https://github.com/your-org/dx-hub`
+    3. `cd dx-hub`
+    4. `docker-compose up`
+    5. open [`http://localhost:1407`](http://localhost:1407)
+
+## What is DX Hub?
 
 [Backstage](https://backstage.io/) is a powerful platform for building developer portals and improve developer experience across your teams. However, it comes with a learning curve and the first steps can feel a bit overwhelming.
 
@@ -14,10 +22,7 @@ The goal of this repo is to **speed up the discovery process**, and to provide a
 
 To create DX Hub Ignite, we have:
 
-* followed the [standard process](https://backstage.io/docs/getting-started/) to create a new Backstage instance.
-* extended the standard UI with content pages, with a focus on content and personalization
-* created visual components to populate these pages
-* populated the catalog with some example entities
-
-
-
+- followed the [standard process](https://backstage.io/docs/getting-started/) to create a new Backstage instance.
+- extended the standard UI with content pages, with a focus on content and personalization
+- created visual components to populate these pages
+- populated the catalog with synthetic data

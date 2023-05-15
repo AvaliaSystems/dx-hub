@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  dx-hub:
+    image: avaliasystems/dx-hub
+    ports:
+      - "1407:1407"
+    volumes:
+      - ./dx-hub/app-config.yaml:/app/app-config.yaml
+      - ./dx-hub/app-config.local.yaml:/app/app-config.local.yaml
+      - ./dx-hub/app-config.docker.yaml:/app/app-config.docker.yaml
+      - ./dx-hub/catalog-avalia:/app/catalog-avalia
+  
