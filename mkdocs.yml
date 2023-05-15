@@ -2,10 +2,12 @@ site_name: DX Hub
 docs_dir: docs
 plugins:
   - techdocs-core
+  - kroki
 nav:
   - Overview: index.md
-  - Getting started: getting-started.md
+  - First steps: first-steps-with-docker.md
+  - Going further: going-further-with-ts.md
   - Explore the code: code-structure.md
+  - Docker assets: docker.md
   - Roadmap: roadmap.md
   - Get in touch: get-in-touch.md
-  
