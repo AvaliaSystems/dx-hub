@@ -7,6 +7,7 @@ The quickest way to experiment is to use our Docker image. After that, if you wa
 - [fork](https://github.com/AvaliaSystems/dx-hub/fork) this repo
 - `git clone https://github.com/your-org/dx-hub`
 - `cd dx-hub`
+- `touch dx-hub/app-config.local.yaml`
 - `docker-compose up`
 - open [`http://localhost:1407`](http://localhost:1407)
 
