@@ -3,6 +3,22 @@ import { renderWithEffects } from '@backstage/test-utils';
 import App from './App';
 
 describe('App', () => {
+  const { ResizeObserver } = window;
+  beforeEach(() => {
+    // @ts-expect-error
+    delete window.ResizeObserver;
+    window.ResizeObserver = jest.fn().mockImplementation(() => ({
+      observe: jest.fn(),
+      unobserve: jest.fn(),
+      disconnect: jest.fn(),
+    }));
+  });
+
+  afterEach(() => {
+    window.ResizeObserver = ResizeObserver;
+    jest.restoreAllMocks();
+  });
+
   it('should render', async () => {
     process.env = {
       NODE_ENV: 'test',
