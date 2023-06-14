@@ -37,3 +37,7 @@ jobs:
       - name: build packages
         working-directory: dx-hub
         run: yarn build:all
+
+      - name: test
+        working-directory: dx-hub
+        run: yarn test:all
