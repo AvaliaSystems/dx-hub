@@ -25,6 +25,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Set up Node.js ${{ matrix.node-version }}
         working-directory: dx-hub
         run: yarn install --frozen-lockfile
 
