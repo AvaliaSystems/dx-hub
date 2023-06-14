@@ -34,4 +34,4 @@ jobs:
 
       - name: build packages
         working-directory: dx-hub
-        run: yarn build
+        run: yarn build:all
