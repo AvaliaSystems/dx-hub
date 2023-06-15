@@ -43,6 +43,7 @@ import { AvaliaDxHubHomePage } from '@internal/plugin-avalia-dxhub-ui-components
 import { AvaliaDxKickStartPage } from '@internal/plugin-avalia-dxhub-ui-components-react';
 import { SustainableBitsPage } from '@internal/plugin-avalia-dxhub-ui-components-react/src/pages/SustainableBitsPage';
 import { MiscUserSettingsTab } from './components/userSettings/MiscUserSettingsTab';
+import { SimplePage } from '@avaliasystems/plugin-simple';
 
 const app = createApp({
   apis,
@@ -123,6 +124,7 @@ const routes = (
     </Route>
     <Route path="/devtools" element={<DevToolsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    <Route path="/simple" element={<SimplePage />} />
   </FlatRoutes>
 );
 
