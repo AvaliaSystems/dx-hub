@@ -52,14 +52,14 @@ jobs:
         working-directory: dx-hub
         run: yarn test:all
 
-      # - name: Create Release Pull Request or Publish to npm
-      #   id: changesets
-      #   uses: changesets/action@v1
-      #   with:
-      #     cwd: dx-hub
-      #   #        with:
-      #   #          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-      #   #          publish: yarn release
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          cwd: dx-hub
+        #        with:
+        #          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+        #          publish: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
