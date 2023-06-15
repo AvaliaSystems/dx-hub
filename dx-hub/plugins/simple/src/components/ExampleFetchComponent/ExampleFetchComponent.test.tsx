@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { ExampleFetchComponent } from './ExampleFetchComponent';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
