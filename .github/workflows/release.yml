@@ -2,7 +2,7 @@ name: Build
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches: [main]
 
 jobs:
@@ -26,9 +26,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: yarn
-          cache-dependency-path: dx-hub/yarn.lock
+          cache-dependency-path: '**/yarn.lock'
 
-      - name: Set up Node.js ${{ matrix.node-version }}
+      - name: Restore node_modules for lerna
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: lerna-${{ matrix.node-version }}-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies with yarn
         working-directory: dx-hub
         run: yarn install --frozen-lockfile
 
@@ -44,14 +50,14 @@ jobs:
         working-directory: dx-hub
         run: yarn test:all
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          cwd: dx-hub
-        #        with:
-        #          # This expects you to have a script called release which does a build for your packages and calls changeset publish
-        #          publish: yarn release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Create Release Pull Request or Publish to npm
+      #   id: changesets
+      #   uses: changesets/action@v1
+      #   with:
+      #     cwd: dx-hub
+      #   #        with:
+      #   #          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+      #   #          publish: yarn release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
