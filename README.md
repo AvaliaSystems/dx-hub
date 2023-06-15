@@ -14,5 +14,3 @@ The quickest way to experiment is to use our Docker image. After that, if you wa
 More information in the [documentation](./docs/index.md), and in particular in the ["first steps with Docker"](./docs/first-steps-with-docker.md) page.
 
 ![dx-hub-home-geek](./docs/images/dx-hub-home-geek.png)
-
-.
