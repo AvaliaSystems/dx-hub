@@ -28,11 +28,11 @@ jobs:
           cache: yarn
           cache-dependency-path: '**/yarn.lock'
 
-      - name: Restore node_modules for lerna (v1)
+      - name: Restore node_modules for lerna
         uses: actions/cache@v3
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: lerna-$${{ matrix.node-version }}-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies with yarn
         working-directory: dx-hub
