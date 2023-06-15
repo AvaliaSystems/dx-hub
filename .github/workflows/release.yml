@@ -25,6 +25,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: yarn
+          cache-dependency-path: dx-hub/yarn.lock
 
       - name: Set up Node.js ${{ matrix.node-version }}
         working-directory: dx-hub
