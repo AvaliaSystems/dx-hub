@@ -1,5 +1,11 @@
 # @avaliasystems/plugin-simple
 
+## 0.2.2
+
+### Patch Changes
+
+- f83be95: Tiny change to test the workflow
+
 ## 0.2.1
 
 ### Patch Changes
