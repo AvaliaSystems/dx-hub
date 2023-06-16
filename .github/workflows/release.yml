@@ -59,7 +59,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: ${{ github.event_name == 'push' }}
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
