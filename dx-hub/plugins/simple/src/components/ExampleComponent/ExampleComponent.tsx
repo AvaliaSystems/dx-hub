@@ -19,7 +19,7 @@ export const ExampleComponent = () => (
     </Header>
     <Content>
       <ContentHeader title="Plugin title">
-        <SupportButton>A description of your plugin goes here!</SupportButton>
+        <SupportButton>A description of your plugin goes here!!!</SupportButton>
       </ContentHeader>
       <Grid container spacing={3} direction="column">
         <Grid item>
