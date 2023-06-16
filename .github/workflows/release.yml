@@ -64,6 +64,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+          cache-dependency-path: '**/yarn.lock'
+
+      - name: Restore node_modules for lerna (key?)
+        uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: lerna-18-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies with yarn
+        working-directory: dx-hub
+        run: yarn install --frozen-lockfile
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
