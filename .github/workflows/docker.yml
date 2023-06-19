@@ -13,9 +13,13 @@ jobs:
       matrix:
         node-version: [18]
 
+    env:
+      CI: true
+      NODE_OPTIONS: --max-old-space-size=4096
+
     steps:
-      #      - name: Checkout
-      #        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
