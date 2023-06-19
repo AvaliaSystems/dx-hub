@@ -81,6 +81,10 @@ jobs:
         working-directory: dx-hub
         run: yarn install --frozen-lockfile
 
+      - name: Build packages
+        working-directory: dx-hub
+        run: yarn build:all
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
