@@ -23,15 +23,15 @@
     "postpack": "backstage-cli package postpack"
   },
   "devDependencies": {
-    "@backstage/cli": "^0.22.7",
+    "@backstage/cli": "^0.23.0",
     "@testing-library/jest-dom": "^5.10.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@backstage/core-components": "^0.13.1",
-    "@backstage/plugin-catalog-react": "^1.6.0",
-    "@backstage/theme": "^0.3.0"
+    "@backstage/core-components": "^0.13.6",
+    "@backstage/plugin-catalog-react": "^1.8.5",
+    "@backstage/theme": "^0.4.3"
   }
 }
