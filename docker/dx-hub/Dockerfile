@@ -3,7 +3,7 @@ FROM node:18-bookworm-slim
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
   apt-get update && \
-  apt-get install -y --no-install-recommends libsqlite3-dev python3 python3-pip python3-venv build-essential g++ gcc musl-dev openjdk-17-jdk curl graphviz fonts-dejavu fontconfig
+  apt-get install -y --no-install-recommends libsqlite3-dev python3 python3-pip python3-venv build-essential make g++ gcc musl-dev openjdk-17-jdk curl graphviz fonts-dejavu fontconfig
 
 #
 # Set up a virtual environment for mkdocs-techdocs-core
