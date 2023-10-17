@@ -4,7 +4,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
   apt-get update && \
   # apt-get install -y --no-install-recommends libsqlite3-dev python3 build-essential && \
-  apt-get install -y --no-install-recommends libsqlite3-dev python3 python3-pip build-essential gcc musl-dev openjdk-11-jdk curl graphviz fonts-dejavu fontconfig && \
+  apt-get install -y --no-install-recommends libsqlite3-dev python3 python3-pip build-essential gcc musl-dev openjdk-17-jdk curl graphviz fonts-dejavu fontconfig && \
   yarn config set python /usr/bin/python3
 
 #
