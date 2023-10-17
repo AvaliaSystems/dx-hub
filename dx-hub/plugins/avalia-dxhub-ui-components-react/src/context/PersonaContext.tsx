@@ -23,9 +23,13 @@ const PersonaContext = createContext<PersonaContextProps>({
 });
 
 const PersonaContextProvider = ({ children }: PropsWithChildren<{}>) => {
-  const [persona, setPersona] = useState<Persona>(() =>
-    LocalStorage.getActivePersona(),
-  );
+  const [persona, setPersona] = useState<Persona>(() => {
+    const savedPersona: Persona = LocalStorage.getActivePersona();
+    if (savedPersona !== 'Boss' && savedPersona !== 'Geek') {
+      return 'Geek';
+    }
+    return 'Boss';
+  });
 
   const contextValuePersona = useMemo(
     () => ({ persona, setPersona }),
@@ -37,6 +41,7 @@ const PersonaContextProvider = ({ children }: PropsWithChildren<{}>) => {
   }, [persona]);
 
   const getPersonalizedValue = (parameterPath: string) => {
+    debugger;
     const propertyNames = parameterPath.split('.');
     let parameterBlock = personalization as any;
     for (const propertyName of propertyNames) {
