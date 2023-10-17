@@ -2,7 +2,7 @@ version: "3"
 
 services:
   dx-hub:
-    image: avaliasystems/dx-hub
+    image: avaliasystems/dx-hub-img
     ports:
       - "1407:1407"
     volumes:
