@@ -3,9 +3,14 @@ FROM node:18-bookworm-slim
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
   apt-get update && \
-  # apt-get install -y --no-install-recommends libsqlite3-dev python3 build-essential && \
-  apt-get install -y --no-install-recommends libsqlite3-dev python3 python3-pip build-essential gcc musl-dev openjdk-17-jdk curl graphviz fonts-dejavu fontconfig && \
-  yarn config set python /usr/bin/python3
+  apt-get install -y --no-install-recommends libsqlite3-dev python3 python3-pip python3-venv build-essential gcc musl-dev openjdk-17-jdk curl graphviz fonts-dejavu fontconfig && \
+
+#
+# Set up a virtual environment for mkdocs-techdocs-core
+#
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 #
 # Install TechDocs requirements
