@@ -128,6 +128,8 @@ const routes = (
   </FlatRoutes>
 );
 
+// create root
+
 export default app.createRoot(
   <>
     <AlertDisplay />
